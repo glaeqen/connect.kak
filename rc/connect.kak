@@ -2,11 +2,6 @@
 declare-option -hidden str connect_root_path %sh(dirname "$kak_source")
 declare-option -hidden str connect_modules_path "%opt{connect_root_path}/connect/modules"
 
-# Default modules
-hook global ModuleLoaded connect %{
-  require-module connect-fifo
-}
-
 provide-module connect %{
   # Modules
   require-module prelude
